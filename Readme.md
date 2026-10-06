@@ -15,7 +15,7 @@ When packaging machines produce defective units—such as dented aluminum cans, 
 
 ## 🏗️ System Architecture
 
-[ High-Speed Conveyor Stream ]
+                     [ High-Speed Conveyor Stream ]
                                   │
                                   ▼
            [ Edge Computer Vision Inspector: vision_inspector.py ]
@@ -135,9 +135,9 @@ docker compose up --build
 
 FastAPI Backend: 
 http://localhost:8000 (API Docs: http://localhost:8000/docs)
-Streamlit Console: http://localhost:8501📊 
+Streamlit Console: http://localhost:8501
 
-Operations Console Features
+📊 Operations Console Features
 Conveyor Batch Simulator: Streams batches of real packaging frames from data/good/ and data/bad/ at user-defined line speeds and injected defect probabilities.
 Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing $SS_{\text{base}}$ against $SS_{\text{dynamic}}$ as rejections occur.
 ERP Alert Triggering: Flags red alert warnings the moment the inflated Reorder Point exceeds available stock.
