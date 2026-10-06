@@ -139,6 +139,6 @@ Streamlit Console: http://localhost:8501
 
 📊 Operations Console Features
 Conveyor Batch Simulator: Streams batches of real packaging frames from data/good/ and data/bad/ at user-defined line speeds and injected defect probabilities.
-Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing $SS_{\text{base}}$ against $SS_{\text{dynamic}}$ as rejections occur.
+Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing SS_base against SS_dynamic as rejections occur.
 ERP Alert Triggering: Flags red alert warnings the moment the inflated Reorder Point exceeds available stock.
 Single-Frame Manual Diagnostics: Allows plant operators to upload individual images to view YOLO bounding boxes, defect tags, and confidence scores.
