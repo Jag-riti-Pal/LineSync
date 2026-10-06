@@ -7,7 +7,7 @@
 ## 📌 Executive Summary & Problem Context
 In automated Fast-Moving Consumer Goods (FMCG) packaging lines (bottling, canning, and dry packaging), quality control at the factory floor is fundamentally disconnected from Sales & Operations Planning (S&OP) inventory logic.
 
-When packaging machines produce defective units—such as dented aluminum cans, crushed PET bottles, or conveyor line jams—traditional Enterprise Resource Planning (ERP) databases assume that planned inventory matches actual output. Static safety stock equations do not account for immediate scrap volatility. As scrap rates increase, actual warehouse yield drops unexpectedly, triggering stockouts and supply-chain bottlenecks across regional distribution hubs.
+When packaging machines produce defective units such as dented aluminum cans, crushed PET bottles, or conveyor line jams traditional Enterprise Resource Planning (ERP) databases assume that planned inventory matches actual output. Static safety stock equations do not account for immediate scrap volatility. As scrap rates increase, actual warehouse yield drops unexpectedly, triggering stockouts and supply-chain bottlenecks across regional distribution hubs.
 
 **LineSync** bridges this gap. It captures real-time edge camera telemetry from high-speed packaging lines, classifies structural defects via a dual-metric Computer Vision pipeline (YOLOv8 + boundary irregularity/gradient analysis), and dynamically rescales inventory safety buffers using real-time scrap rates to trigger automated replenishment purchase orders.
 
