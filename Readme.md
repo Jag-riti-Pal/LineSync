@@ -89,26 +89,6 @@ To handle transparent PET plastic, printed reflective aluminum cans, and non-tar
 
 ---
 
-## 📂 Repository Structure
-
-```text
-LineSync/
-├── main.py                 # FastAPI microservice routing inspection & inventory logic
-├── app.py                  # Dual-panel Streamlit operations dashboard & simulator
-├── vision_inspector.py     # YOLOv8 + OpenCV contour/gradient anomaly engine
-├── inventory_engine.py     # Deterministic safety stock & ROP replenishment calculations
-├── caliberate.py            # Dataset diagnostic profile feature extractor
-├── Dockerfile              # Containerization definition with OpenCV C-libraries
-├── docker_compose.yml      # Orchestration for FastAPI + Streamlit deployment
-├── requirements.txt        # Pinned runtime dependencies
-├── README.md               # Architecture documentation and mathematical proofs
-└── data/
-    ├── good/               # Intact sample bottles and cans
-    └── bad/                # Defective (crushed, dented, collapsed) samples
-
-
-
-
 ⚡ Quickstart Guide
 
 Option A: Local Environment (Python 3.10+)
@@ -142,3 +122,27 @@ Conveyor Batch Simulator: Streams batches of real packaging frames from data/goo
 Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing SS_base against SS_dynamic as rejections occur.
 ERP Alert Triggering: Flags red alert warnings the moment the inflated Reorder Point exceeds available stock.
 Single-Frame Manual Diagnostics: Allows plant operators to upload individual images to view YOLO bounding boxes, defect tags, and confidence scores.
+
+---
+
+## 📂 Repository Structure
+
+```text
+LineSync/
+├── main.py                 # FastAPI microservice routing inspection & inventory logic
+├── app.py                  # Dual-panel Streamlit operations dashboard & simulator
+├── vision_inspector.py     # YOLOv8 + OpenCV contour/gradient anomaly engine
+├── inventory_engine.py     # Deterministic safety stock & ROP replenishment calculations
+├── caliberate.py            # Dataset diagnostic profile feature extractor
+├── Dockerfile              # Containerization definition with OpenCV C-libraries
+├── docker_compose.yml      # Orchestration for FastAPI + Streamlit deployment
+├── requirements.txt        # Pinned runtime dependencies
+├── README.md               # Architecture documentation and mathematical proofs
+└── data/
+    ├── good/               # Intact sample bottles and cans
+    └── bad/                # Defective (crushed, dented, collapsed) samples
+
+
+
+
+
