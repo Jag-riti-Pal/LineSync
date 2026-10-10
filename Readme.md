@@ -91,39 +91,56 @@ To handle transparent PET plastic, printed reflective aluminum cans, and non-tar
 
 ## ⚡ Quickstart Guide
 
-**Option A**: Local Environment (Python 3.10+)
+**Option A**: 
+Local Environment (Python 3.10+)
 
 Clone the repository:
-'''
+```bash
 git clone [https://github.com/your-username/LineSync.git](https://github.com/your-username/LineSync.git)
 cd LineSync
-'''
+```
 
 Set up a virtual environment and install dependencies:
+```bash
 python -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 Start the FastAPI Microservice (Terminal 1):
+```bash
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
 
 Launch the Operations Console (Terminal 2):
+```bash
 streamlit run app.py
+```
 
-Access the interactive web console at http://localhost:8501.
+Access the interactive web console at 
+```bash
+http://localhost:8501.
+```
 
-**Option B**: Docker DeploymentDeploy both the backend microservice and frontend console using Docker Compose:
+**Option B**: 
+Docker DeploymentDeploy both the backend microservice and frontend console using Docker Compose:
 docker compose up --build
 
 FastAPI Backend: 
+```bash
 http://localhost:8000 (API Docs: http://localhost:8000/docs)
-Streamlit Console: http://localhost:8501
+```
+
+Streamlit Console: 
+```bash
+http://localhost:8501
+```
 
 ## 📊 Operations Console Features
-Conveyor Batch Simulator: Streams batches of real packaging frames from data/good/ and data/bad/ at user-defined line speeds and injected defect probabilities.
-Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing SS_base against SS_dynamic as rejections occur.
-ERP Alert Triggering: Flags red alert warnings the moment the inflated Reorder Point exceeds available stock.
-Single-Frame Manual Diagnostics: Allows plant operators to upload individual images to view YOLO bounding boxes, defect tags, and confidence scores.
+* Conveyor Batch Simulator: Streams batches of real packaging frames from data/good/ and data/bad/ at user-defined line speeds and injected defect probabilities.
+* Live Telemetry & Closed-Loop Charts: Plots real-time adjustments comparing $$SS_{\text{base}}$$ against $$SS_{\text{dynamic}}$$ as rejections occur.
+* ERP Alert Triggering: Flags red alert warnings the moment the inflated Reorder Point exceeds available stock.
+* Single-Frame Manual Diagnostics: Allows plant operators to upload individual images to view YOLO bounding boxes, defect tags, and confidence scores.
 
 ---
 
